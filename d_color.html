@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+	div{
+		width: 30%;
+		height:200px;
+		margin:30px;
+		border:solid;
+	}
+	
+</style>
+
+</head>
+<body>
+	<div style="background-color: red">
+		배경색을 색상명으로 지정
+	</div>
+	<div style="color:rgb(0,0,255)">
+		컨텐츠 색상을 rgb로 지정
+	</div>
+	<div style="background-color: rgb(0,0,0); color:rgba(255,255,255,0.5)">
+		배경색을 rgb로 컨텐츠 색상은 rgba로 지정<br>
+		rgba는 alpha값을 조정해 투명도를 지정할 수 있다.<br>
+		alpha 값은 0~1 값으로 지정<br>
+		0이면 완전 투명, 1 완전 불투명<br>
+	</div>
+	<div style="background-color: #0000ff; color:rgba(255,255,255,0.3)">
+		배경색을 16진수로 컨텐츠 색상은 rgba로 지정
+		16진수 : 0~15, 0~9 10(a), 11(b), 12(c), 13(d), 14(e), 15(f)
+	</div>
+
+
+</body>
+</html>

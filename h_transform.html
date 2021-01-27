@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style type="text/css">
+		div{
+			width:375px;
+			height:50px;
+			background-color: red;
+			color:white;
+			font-size:1.5vw;
+			margin-bottom: 10px;
+		}
+		
+		#translateX:hover{
+			/* 요소의 너비만큼 x축으로 이동  */
+			transform:translateX(100%);			
+		}
+		
+		#translateY:hover{
+			/* 요소의 높이의 150%만큼 y축으로 이동  */
+			transform:translateY(250%);
+		}
+		
+		#translate:hover{
+			/* 요소의 높이 */
+			transform:translate(110%, -100%);
+		}
+		
+		#rotate:hover{
+			transform:rotate(340deg);
+		}
+		
+		#scale:hover{
+			transform:scale(0.6,0.6); 
+		}
+		
+		#skew:hover{
+			transform:skew(110deg,30deg);
+		}
+	
+	</style>
+</head>
+<body>
+	<h1>transform</h1>
+	<h2>transform:translate</h2>
+	<div id="translateX">translateX(x) : 요소를 x축으로 이동</div>
+	<div id="translateY">translateY(y) : 요소를 y축으로 이동</div>
+	<div id="translate">translate(x,y) : 요소를 x축,y축 으로 이동</div>
+	
+	<h2>transform:rotate</h2>
+	<div id="rotate">rotate(deg) : 회전</div>
+	
+	<h2>transform:scale</h2>
+	<div id="scale">scale(x,y) : 크기</div>
+	
+	<h2>transform:skew</h2>
+	<div id="skew">skew(deg,deg)</div>
+
+</body>
+</html>

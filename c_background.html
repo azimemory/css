@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+	<style type="text/css">
+		div{
+			margin:30px;
+			width:300px;
+			height:50px;
+		}
+		
+		/*  배경색상 등록 */
+		#div_bg{
+			background-color: rgb(255, 222, 173);
+		}
+		
+		
+		/* 배경이미지 등록 */
+		#div_bg-img{
+			
+			width: 1024px;
+			height: 800px;
+			
+			/* 해당 요소의 경계선 표시  */
+			border:solid;
+			
+			background-image: url("resources/image/city1.PNG");
+			
+			background-repeat: no-repeat; 
+			/* 
+			배경사진이 잘리지 않을 만큼만 반복
+			background-repeat: space; 
+			*/
+			
+			/* 배경이미지의 크기 */
+			/* 요소안에 배경이미지가 모두 들어오도록 이미지를 확대/축소  
+			   배경이미지의 비율 유지
+			  
+				
+			   배경이미지로 요소를 모두 덮을 수 있도록 이미지를 확대/축소 
+			   background-size: cover;
+			   
+			   배경이미지의 크기를 고정값으로 지정
+			   background-size: 1024px 800px;
+			   
+			   배경이미지의 크기를 비율로 지정
+			   background-size: 50% 50%;
+			*/
+			
+			 background-size: contain;
+			  
+			/* 배경사진의 위치 */
+			background-position: 50% 50%;
+		}
+		
+		.div_bg-clip{
+			width: 300px;
+			height: 300px;
+			padding:30px;
+			border:dashed;
+			border-width: 20px;
+		}
+	
+		/* 배경 적용 범위 */
+		#div_bg-clip1{
+			background-image: url('https://lh3.googleusercontent.com/proxy/aC9DZfJuWnZ3cRxfkpU5iGGilgB0dw0QI9FN4T0hKf2TEduR00ExOQ1jBJ3B_PXgV8KSeO8ra_BworQExns3CtfGanJdQxRQpg1hHUAmZcohW059kdygNYwEDQ9YYg');
+			background-clip: content-box;
+		}
+		
+		#div_bg-clip2{
+			background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxOKUye_XdYP-d_74chst-xPE66WUDtSsRJQ&usqp=CAU');
+			background-clip: padding-box;
+			background-size: cover;
+		}
+		
+		#div_bg-clip3{
+			background-image: url('https://www.sisunnews.co.kr/news/photo/201911/115747_247543_2443.jpg');
+			background-clip: border-box;
+			background-size: cover;
+		}
+		
+		/* 
+			vendor prefix
+			아직 웹표준이 아닌 CSS의 속성을 사용할 때
+			해당 속성 앞에 붙여 해당 속성이 사용될 브라우저를 명시해주는 접두어
+			
+			vendor prefix의 종류
+			-webkit- : safari, chrome, android, ios브라우저
+			-moz-: firefox
+			-ms-: internet explorer, edge
+			-o-: opera
+		 */
+		
+		#div_bg-clip4{
+			background-image: url('https://www.thedailypost.kr/news/photo/201907/70294_61167_1033.png');
+			-webkit-background-clip: text;
+			-moz-background-clip: text;
+			-ms-background-clip: text;
+			-o-background-clip: text;
+			background-clip: text;
+			color: transparent;
+			font-size:8vw;
+			font-weight: 900;
+		}
+		
+	
+	</style>
+
+</head>
+<body>
+	<h1>배경색, 배경 이미지</h1>
+	<pre>
+		background-color:색상명|rgb|rgba|16진수
+	</pre>
+	<a href="https://www.w3schools.com/colors/colors_names.asp" target="_blank">색상명참조사이트</a>
+	
+	<hr>
+	
+	<h2>배경 색상 테스트</h2>
+	<pre>요소의 영역범위의 배경에 대한 색상을 지정</pre>
+	<div id="div_bg">배경 색상 변경 테스트</div>
+	
+	<h2>배경 이미지 테스트</h2>
+	<pre>background-image 속성을 사용해 배경사진을 지정
+		사진의 크기에 따라서 자동으로 반복해서 이미지 나타난다.
+		배경사진의 반복 패턴을 변경하고 싶다면 background-repeat 속성을 사용해 반복 패턴을 변경할 수 있다.
+		배경사진이 요소보다 크거나 작다면 배경사진의 크기를 background-size 속성을 사용해 크기를 변경할 수 있다.
+	</pre>
+	
+	<div id="div_bg-img">배경사진</div>
+	
+	<hr>
+	
+	<h3>배경 적용 범위 지정</h3>
+	<pre>
+		배경이 적용될 범위를 지정할 때는 background-clip 속성을 사용한다.
+		background-clip:content-box;
+		background-clip:padding-box;
+		background-clip:border-box;
+		background-clip:text;
+	</pre>
+	
+	<div class="div_bg-clip" id="div_bg-clip1">background-clip:content-box;</div>
+	<div class="div_bg-clip" id="div_bg-clip2">background-clip:padding-box;</div>
+	<div class="div_bg-clip" id="div_bg-clip3"></div>
+	<div class="div_bg-clip" id="div_bg-clip4">background<br>-clip:<br>text;</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+</body>
+</html>

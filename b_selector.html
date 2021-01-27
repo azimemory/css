@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style type="text/css">
+		
+	/* 전체선택자 */
+	 *{
+	 	color:red;
+	  }
+	  
+	/* 태그 선택자  */
+	li{
+		color:blue;
+	}
+	
+	/* 클래스 선택자 */
+	.class_test{
+		color:green;
+	}
+	
+	/* 아이디 선택자  */
+	#id_test{
+		color:purple;
+	}
+	
+	</style>
+</head>
+<body>
+	<h1>CSS 선택자</h1>
+	<pre>
+		선택자란?
+		
+		특정 HTML Element를 선택하기 위해 사용하는 기능으로, Element를 선택해 원하는 스타일을 
+		적용할 수 있게끔 해준다.
+		
+		선택자의 범위가 좁을 수록 우선순위는 올라간다.
+		만약 선택자의 같다면 더 아래에 작성된 스타일이 적용된다.
+	</pre>
+	
+	<hr>
+	
+	<h2>전체 선택자</h2>
+	<pre>모든 태그를 선택할 때 사용하는 선택자</pre>
+	<ul>
+		<li>테스트1</li>
+		<li>테스트2</li>
+		<li>테스트3</li>
+	</ul>
+	
+	
+	<hr>
+	
+	<h2>태그 선택자</h2>
+	<pre>
+		태그 이름으로 요소를 선택할 때 사용하는 선택자.
+	</pre>
+	<ul>
+		<li>태그선택자1</li>
+		<li>태그선택자2</li>
+		<li>태그선택자3</li>
+	</ul>
+	
+	<hr>
+	
+	<h2>class 선택자</h2>
+	<pre>
+		class 속성의 속성값으로 원하는 element를 선택하는 선택자
+	</pre>
+	<ul>
+		<li class="class_test">클래스선택자1</li>
+		<li class="class_test">클래스선택자2</li>
+		<li>태그선택자3</li>
+	</ul>
+	
+	<hr>
+	
+	<h2>id 선택자</h2>
+	<pre>
+		id 속성의 속성값으로 원하는 element를 선택하는 선택자	
+		id 속성값은 해당 문서에 고유한 값이어야 한다.
+	</pre>
+	<ul>
+		<li class="class_test" id="id_test">아이디선택자1</li>
+		<li class="class_test">클래스선택자2</li>
+		<li>태그선택자3</li>
+	</ul>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+</body>
+</html>

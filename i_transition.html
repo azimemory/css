@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div{
+		margin:10px 0 10px 0;
+		width:100px;
+		height:100px;
+		background-color: red;
+		border:solid;
+	}
+	
+	/* 
+		1. transition-property: 트랜지션이 적용되어야 하는 속성의 이름을 명시
+							만약에 이 속성이 없으면, 해당 요소의 모든 속성에 트랜지션이 적용된다.
+		2. transition-duration: 트랜지션이 동작하는 시간
+		3. transition-delay : 트랜지션이 동작하기 까지 걸리는 시간을 지정	
+		4. transition-timing-function: 트랜지션의 중간 변화 시점의 속도를 설정
+			 linear:시작부터 종료까지 동일한 속도를 유지
+			 ease : 극초반 느리게 변하고, 초반은 빠르게 변하고, 종료지점은 다시 느리게 변함
+			 ease-in:시작 지점의 변화가 천천히 진행
+			 ease-out:종료지점의 변화가 천천히 진행
+			 ease-in-out:시작지점과 종료지점의 변화가 천천히 진행	
+	 */
+	 
+	.tran1:hover{
+		transition-duration:2s;
+		background-color: yellow;
+	}
+	
+	.tran2:hover{
+		transition-property:background-color,transform,width,height,color;
+		transition-duration:2s, 4s,1s,2s,2s;
+		color:white;
+		background-color: yellow;
+		transform:skew(350deg,350deg);
+		width:200px;
+		height:200px;
+	}
+	
+	.tran3:hover{
+		transition-duration:10s;
+		transition-timing-function:ease-in-out;
+		transform:rotate(3600deg);
+		background-color: blue;
+	}
+
+</style>
+</head>
+<body>
+	<h1>트랜지션</h1>
+	<p>요소의 속성의 변화가 시간에 따라 조금씩 변화하는 것을 의미한다.</p>
+	
+	<h2>트랜지션 적용</h2>
+	<div class="tran1"></div>
+	
+	<h2>트랜지션을 여러 속성에 적용하고, 속성마다 트랜지션 적용시간을 다르게 적용</h2>
+	<div class="tran2">
+		글씨가 커지나?
+	</div>
+	
+	<h2>중간 진행 속도를 조정</h2>
+	<div class="tran3"></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+</body>
+</html>

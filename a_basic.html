@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<link href="resources/css/css01.css" rel="stylesheet" type="text/css"/>
+<!-- 
+	 href : 외부 자원의 경로
+	 rel  : 현재 문서와 외부 자원과의 관계
+	 type : Mime Type
+ -->
+
+<style type="text/css">
+	/* css 선택자를 사용해 style을 적용할 element를 지정하고, 적용할 style을 작성 */
+	span{
+		color:white;
+	}
+</style>
+</head>
+<body style="background-color: rgb(0 0 0);">
+	<h1 style="color:white">CSS 작성방법 3가지</h1>
+
+	<!-- 
+		1. inline style sheet  방식
+			HTML 엘리먼트의 style 속성에 css 속성을 작성
+			* 가장 우선순위가 높은 방식
+			
+		작성방법 : css 속성명:속성값
+	 -->
+	 <b style="color:yellow">1.인라인 스타일 시트</b>
+	 <p>
+	 	<span>2. 내부 스타일 시트 : HTML의 head태그 안에 style 태그를 생성해 css를 작성<br>
+	 			* 우선순위가 두 번째로 높다.
+	 	</span>
+	 	<br>
+	 	<b>3. 외부 스타일 시트 : 외부에 css파일 작성(가장 많이 사용)</b>
+	</p>
+
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+	<!-- 
+		CSS단위는 절대길이단위와 상대길이단위이로 나뉜다.
+		절대길이 : px(1/96 inch), pt, cm, mm
+		상대길이 : vw : viewport(사용자에게 보여지는 영역)의 %단위 1vw = 브라우저 가로 길이의 1%
+				   vh : viewport 높이의 % 단위
+				   vmin : viewport의 높이와 너비 중에서 작은 치수의 % 단위
+				   vmax : viewport의 높이와 너비 중에서 큰 치수의 % 단위
+				   em(equal m) : 요소 폰트의 'm' 의 크기를 기준으로 사용하는 단위 
+				   ex(equal x) : 요소 폰트의 'x' 의 크기를 기준으로 사용하는 단위
+				   rem(root equal m) : 루트 요소 폰트의 'm'의 크기를 기준으로 사용하는 단위
+				   
+				   *기본폰트크기 : 16px, 12pt
+	 -->
+
+
+	<style type="text/css">
+		
+		/*  font 종류, font두께, font스타일, font크기, 
+			줄높이, 소문자 -> 대문자   */
+		p{
+			font-size: 180px;
+		}
+		
+		div>p{
+			/* 
+			font-family: "궁서";
+			font-weight: 900;
+			font-style: italic;
+			font-size: 5vw;
+			
+			line-height:1  >> 폰트의 높이와  줄높이가 같은
+			line-height:1.5 >> 줄높이가 폰트 높이의 1.5배
+			line-height:0.5 >> 줄높이가 폰트 높이의 0.5배 -> 윗줄의 글씨와 아래줄의 글씨 겹치게 된다.
+			line-height: 0.7;
+			font-variant: small-caps; 
+			
+			*/
+			
+			
+			/* font: [style variant weight] size/line-height family  */
+			font: italic small-caps 10vw/1.5 "궁서";
+		}
+	
+	
+	</style>
+</head>
+<body>
+
+	<p>CSS Font 속성</p>
+	<div>
+		<p>CSS Font 속성<br>
+	  	   CSS Font 속성
+		</p>
+		
+	</div>
+
+</body>
+</html>

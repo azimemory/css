@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+.wrap{
+	width:80%;
+	height:950px;
+	background-color: rgb(0,255,255);
+	position: relative;
+	left:20%;
+}
+
+.wrap div{
+	width:25%;
+	height:110px;
+	background-color: yellow;
+	
+	/* 위 우 아래 좌  */
+	margin:0 1% 1% 0;
+	font-size:1vw;
+}
+
+.fixed_left{
+	background-color: rgba(0,255,255,0.2);
+	position: fixed;
+	width:10%;
+	height:300px;
+	top:50%;
+	left:5%;
+	transform:translateY(-50%);
+}
+
+.fixed_top{
+	background-color: red;
+	position: fixed;
+	width:100%;
+	height:50px;
+	top:0%;
+}
+
+</style>
+
+</head>
+<body>
+	<!-- position:fixed 작성 할 자리 -->
+	<div class="fixed_top">
+		test
+	</div>
+	
+	<div class="fixed_left">
+		test
+	</div>
+	<br><br><br><br>
+	<h1>position : Element가 배치되는 위치를 지정하는 속성</h1>
+	<pre>
+		static: 기본값, 브라우저가 html요소를 배치하는 위치에 요소가 배치된다.
+				top,bottom,left,right,z-index 속성을 사용할 수 없다.
+				
+		relative: 브라우저가 html요소를 배치시키는 위치에 요소가 배치된다.
+				top,bottom,left,right,z-index 속성을 사용할 수 있다.
+				
+		absolute: 부모요소의 좌측상단에 요소가 배치된다.
+				top,bottom,left,right,z-index 속성을 사용할 수 있다.
+				top,bottom,left,right 속성은 relative와 다른 기준으로 동작한다.
+				position이 absolute인 요소는 normal flow에서 제외된다.
+				
+		fixed: 스크롤과 상관없이 화면 좌측상단을 기준으로 요소가 배치된다.
+				top,bottom,left,right,z-index 속성을 사용할 수 있다.
+	</pre>
+	
+	<h1>top/bottom/left/right</h1>
+	<pre>
+		top: 속성값으로 지정한 크기만큼 요소를 위에서 아래로 이동
+		bottom : 속성값으로 지정한 크기만큼 요소를 아래에서 위로 이동
+		left: 속성값으로 지정한 크기만큼 요소를 왼쪽에서 오른쪽으로 이동
+		right: 속성값으로 지정한 크기만큼 요소를 오른쪽에서 왼쪽으로 이동
+	
+		position:static  동작 x
+		position:relative  요소의 현재 위치를 기준으로 이동
+		position:absolute  부모요소의 top/bottom/left/right 를 기준으로 이동
+	
+	</pre>
+	
+	<div class="wrap">
+		<div class="rel_left"
+		style="position:relative;
+			 left:30%;"
+		>
+			position:absolute;<br>
+			left:30%
+		</div>
+		<div class="rel_right"
+		style="position:relative;
+			right:5%"
+		>
+			position:relative;<br>
+			right:5%
+		</div>
+		<div class="rel_top"
+			style="position: relative;
+			top:30%; left:70%"
+		>
+			position:relative;<br>
+			top:30%; left:70%
+		</div>
+		<div class="rel_bottom"
+			style="position:relative;
+			bottom:3%"
+		>
+			position:relative;<br>
+			bottom:3%
+		</div>
+		<div class="abs_left"
+			style="position: absolute;
+			top:10%; left:40%;
+			"
+		>
+			position:absolute;
+			top:10%;
+			left:40%;
+		</div>
+		<div class="abs_right"
+			style="position:absolute;
+				right:35%;"
+		>
+			position:absolute;
+			right:35%;
+		</div>
+		<div class="abs_top"
+			style="position:absolute;
+			top:70%;
+			"
+		>
+			position:absolute;
+			top:70%;
+		</div>
+		<div class="abs_bottom"
+			style="position: absolute;
+			bottom:10%; right:10%;
+			"
+		>
+			position:absolute;
+			bottom:10%;
+			right:10%;
+		</div>
+		
+	</div>	
+	 
+	
+	
+	
+	
+	
+	
+
+</body>
+</html>

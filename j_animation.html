@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	/* 
+		요소의 속성이 변경될 때 각 프레임마다 원하는 스타일을 지정
+		
+		@keyframes 이름 {}
+			애니메이션이 실행되었을 때 발생할 속성의 변화를 진행시간의 %단위로 작성
+			@keyframes를 작성한 후 다른 요소에서 animation-name 속성을 사용해 참조 시킬 수 있다.
+			
+			animation-name:참조할 keyframes의 이름을 작성
+			animation-duration:애니메이션이 진행되는 데 걸리는 시간
+			animation-delay: 애니메이션이 시작하기까지 걸리는 시간
+			animation-iteration-count:애니메이션이 반복될 횟수 , infinite :무한반복
+			animation-direction: 애니메이션이 종료된 뒤 다시 시작될 때 시작될 방향을 지정
+			animation-play-state: 애니메이션을 멈추거나 다시 시작
+			animation-timing-function: 애니메이션의 중간 진행도 속도
+			animation-fill-mode : 애니메이션이 끝난 뒤 적용될 속성의 값을 지정
+	
+	 */
+	 
+	 div{
+	 	width:100px;
+	 	height:100px;
+	 	background-size:cover;
+	 	background-image: url("https://img7.yna.co.kr/etc/inner/KR/2014/05/15/AKR20140515057800005_01_i_P2.jpg");
+	 	animation-name:pcAni;
+	 	animation-duration:5s;
+	 	animation-iteration-count:3;
+	 	
+	 	/* 
+	 		normal : 정방향
+	 		alternate : 홀수번째:정방향 짝수번째:역방향
+	 		reverse : 역방향
+	 	 */
+	 	animation-direction: alternate;
+	 	
+	 	/* 
+	 		backwards:애니메이션 실행 이전 속성값으로 요소를 되돌림
+	 		forwards: 애니메이션 끝난 시점의 속성값을 사용
+	 	 */
+	 	animation-fill-mode:forwards;
+	 }
+	 
+	 div:hover{
+	 	/* 
+	 		일시정지 : paused;
+	 		다시 실행 : running;
+	 	 */
+	 	animation-play-state:paused;
+	 }
+	 
+	 @keyframes pcAni{
+	 	/* 
+	 		애니메이션을 실행할 때 각 프레임의 스타일을 지정
+	 		0% 출발해 100%도착하면 애니메이션
+	 	 */
+	 	 
+	 	 10%{
+	 	 	width:130px;
+	 	 	height:130px;
+	 	 	transform:translateX(800%);
+	 	 	background-image: url("https://t1.daumcdn.net/cfile/tistory/99DB3F3359CEFFB20C");
+	 	 }
+	 	 
+	 	 30%{
+	 	 	width:150px;
+	 	 	height:150px;
+	 	 	transform:translateY(300%);
+	 	 	border-radius:100%;
+	 	 	background-image: url("https://img.insight.co.kr/static/2020/06/18/1200/279n314c840d2694pl8x.jpg");
+	 	 }
+	 	 
+	 	 50%{
+	 	 	width:210px;
+	 	 	height:210px;
+	 	 	transform:translateX(250%);
+	 	 	border:dotted;
+	 	 	border-radius:100%;
+	 	 	background-image: url("https://t1.daumcdn.net/cfile/tistory/217F1F4757AF268B08");
+	 	 }
+	 	 
+	 	 70%{
+	 	 	width:110px;
+	 	 	height:110px;
+	 	 	transform:translateY(100%);
+	 	 	border:dotted;
+	 	 	border-radius:1%;
+	 	 	background-image: url("https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile22.uf.tistory.com%2Fimage%2F990D9D4A5E2F0D2B0B74E6");
+	 	 
+	 	 }
+	 	 
+	 	 90%{
+	 	 	width:400px;
+	 	 	height:400px;
+	 	 	transform:rotate(3600deg);
+	 	 	border:dotted;
+	 	 	border-radius:100%;
+	 	 	background-image: url("https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile22.uf.tistory.com%2Fimage%2F990D9D4A5E2F0D2B0B74E6");
+	 	
+	 	 }
+	 	 
+	 	 100%{
+	 	 	width:130px;
+	 	 	height:130px;
+	 	 	transform:skew(250deg,250deg);
+	 	 	border:solid;
+	 	 	background-image: url("https://t2.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/3kT/image/NgJWgg_q-Cnf8G3RtoRGjGgCH3M");
+	 	 }
+	 }
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+
+</style>
+
+</head>
+<body>
+
+	<h1>Animation 효과</h1>
+	<div class="anima"></div>
+</body>
+</html>

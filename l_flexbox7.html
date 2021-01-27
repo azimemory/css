@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	.con{
+		display:flex;
+		width:300px;
+		height:300px;
+		background-color: yellow;
+	}
+	
+	.item{
+		width:100px;
+		height:100px;
+		margin:auto;
+	}
+</style>
+
+</head>
+<body>
+	<h1>flex를 사용했을 때의 margin:auto</h1>
+	<pre>
+		margin:auto 로 지정할 경우 가능한 최대 margin영역을 확보한다.
+		단, margin-left와 margin-right에만 적용된다.
+		
+		하지만 flex를 사용하면 margin:auto에서
+		margin-top과 margin-bottom도 최대 margin 영역을 확보하게 된다.
+	
+	</pre>
+	<div class="con" >
+		<div class="item" style="background-color: red; flex-basis:auto"></div>
+	</div>
+</body>
+</html>

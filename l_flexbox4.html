@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+	.item{
+		height:50px;
+	}
+	
+	.con{
+		display:flex;
+		flex-wrap: wrap;
+		height:300px;
+		border:dotted;
+	}
+
+
+</style>
+
+</head>
+<body>
+	<h1>Container >>> align-content</h1>
+	<pre>
+		align-content: item을 여러줄로 표현 될 경우(flex-wrap:wrap/wrap-reverse)
+					   아이템들의 교차축 정렬방식을 설정하기 위한  속성
+		align-content:normal            default
+		align-content:flex-start 		item의 시작점부터 정렬
+		align-content:flex-end 			item의 끝점부터 정렬
+		align-content:center 			item을 가운데 정렬
+		align-content:space-around		item을 일정 간격으로 정렬
+		align-content:space-between		item을 일정 간격으로 정렬 / 시작과 끝 요소를 시작점/끝점에 배치
+		align-content:stretch			Container의 교차축을 채우기 위해 item의 크기를 늘림
+	</pre>
+	
+	<h2>1. align-content:flex-start</h2>
+	<div class="con" style="align-content:flex-start">
+		<div class="item" style="background-color: pink; width:10%;"></div>
+		<div class="item" style="background-color: red; width:30%;"></div>
+		<div class="item" style="background-color: yellow; width:50%;"></div>
+		<div class="item" style="background-color: green; width:20%;"></div>
+		<div class="item" style="background-color: blue; width:40%;"></div>
+		<div class="item" style="background-color: pink; width:10%;"></div>
+		<div class="item" style="background-color: red; width:30%;"></div>
+		<div class="item" style="background-color: yellow; width:50%;"></div>
+		<div class="item" style="background-color: green; width:20%;"></div>
+		<div class="item" style="background-color: blue; width:40%;"></div>
+	</div>
+	
+	<h2>2. align-content:flex-end</h2>
+	<div class="con" style="align-content:flex-end">
+		<div class="item" style="background-color: pink; width:10%;"></div>
+		<div class="item" style="background-color: red; width:30%;"></div>
+		<div class="item" style="background-color: yellow; width:50%;"></div>
+		<div class="item" style="background-color: green; width:20%;"></div>
+		<div class="item" style="background-color: blue; width:40%;"></div>
+		<div class="item" style="background-color: pink; width:10%;"></div>
+		<div class="item" style="background-color: red; width:30%;"></div>
+		<div class="item" style="background-color: yellow; width:50%;"></div>
+		<div class="item" style="background-color: green; width:20%;"></div>
+		<div class="item" style="background-color: blue; width:40%;"></div>
+	</div>
+	
+	<h2>3. align-content:center</h2>
+	<div class="con" style="align-content:center">
+		<div class="item" style="background-color: pink; width:10%;"></div>
+		<div class="item" style="background-color: red; width:30%;"></div>
+		<div class="item" style="background-color: yellow; width:50%;"></div>
+		<div class="item" style="background-color: green; width:20%;"></div>
+		<div class="item" style="background-color: blue; width:40%;"></div>
+		<div class="item" style="background-color: pink; width:10%;"></div>
+		<div class="item" style="background-color: red; width:30%;"></div>
+		<div class="item" style="background-color: yellow; width:50%;"></div>
+		<div class="item" style="background-color: green; width:20%;"></div>
+		<div class="item" style="background-color: blue; width:40%;"></div>
+	</div>
+	
+	<h2>4. align-content:space-between</h2>
+	<div class="con" style="align-content:space-between">
+		<div class="item" style="background-color: pink; width:10%;"></div>
+		<div class="item" style="background-color: red; width:30%;"></div>
+		<div class="item" style="background-color: yellow; width:50%;"></div>
+		<div class="item" style="background-color: green; width:20%;"></div>
+		<div class="item" style="background-color: blue; width:40%;"></div>
+		<div class="item" style="background-color: pink; width:10%;"></div>
+		<div class="item" style="background-color: red; width:30%;"></div>
+		<div class="item" style="background-color: yellow; width:50%;"></div>
+		<div class="item" style="background-color: green; width:20%;"></div>
+		<div class="item" style="background-color: blue; width:40%;"></div>
+	</div>
+	
+	<h2>5. align-content:space-around</h2>
+	<div class="con" style="align-content:space-around">
+		<div class="item" style="background-color: pink; width:10%;"></div>
+		<div class="item" style="background-color: red; width:30%;"></div>
+		<div class="item" style="background-color: yellow; width:50%;"></div>
+		<div class="item" style="background-color: green; width:20%;"></div>
+		<div class="item" style="background-color: blue; width:40%;"></div>
+		<div class="item" style="background-color: pink; width:10%;"></div>
+		<div class="item" style="background-color: red; width:30%;"></div>
+		<div class="item" style="background-color: yellow; width:50%;"></div>
+		<div class="item" style="background-color: green; width:20%;"></div>
+		<div class="item" style="background-color: blue; width:40%;"></div>
+	</div>
+	
+	<!-- align-content:stretch : item들의 height값이 지정되어있으면 동작x -->
+	<h2>6. align-content:stretch</h2>
+	<div class="con" style="align-content:stretch;">
+		<div style="background-color: pink; width:10%;"></div>
+		<div style="background-color: red; width:30%;"></div>
+		<div style="background-color: yellow; width:50%;"></div>
+		<div style="background-color: green; width:20%;"></div>
+		<div style="background-color: blue; width:40%;"></div>
+		<div style="background-color: pink; width:10%;"></div>
+		<div style="background-color: red; width:30%;"></div>
+		<div style="background-color: yellow; width:50%;"></div>
+		<div style="background-color: green; width:20%;"></div>
+		<div style="background-color: blue; width:40%;"></div>
+	</div>
+</body>
+</html>

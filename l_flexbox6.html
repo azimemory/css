@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	.con{
+		display:flex;
+	}
+	
+	.item{
+		width:200px;
+		height:100px;
+	}
+
+</style>
+
+
+</head>
+<body>
+	<h1>1. item >>> order</h1>
+	<pre>
+		order:item의 정렬 순서를 지정, 속성값이 클 수록 뒤에 정렬
+	</pre>
+	<div class="con">
+		<div class="item" style="background-color: pink; order:1">1<br>order:1</div>
+		<div class="item" style="background-color: red; order:3">2<br>order:3</div>
+		<div class="item" style="background-color: yellow; order:5">3<br>order:5</div>
+		<div class="item" style="background-color: green; order:2">4<br>order:2</div>
+		<div class="item" style="background-color: blue; order:4">5<br>order:4</div>
+	</div>
+	
+	<h1>2. item >>> flex-grow</h1>
+	<pre>
+		flex-grow: Container의 크기가 증가함에 따라 item의 크기가 증가할 때 증가하는 비율을 지정하는 속성
+		* flex-grow:0 -> Container의 크기가 증가해도 item의 크기가 증가하지 않는다.
+		* flex-grow:1이상 -> item의 크기와 상관없이 Container를 가득 채우도록 크기가 증가한다.
+	</pre>
+	<div class="con">
+		<div class="item" style="background-color: pink; flex-grow:0">1<br>flex-grow:0</div>
+		<div class="item" style="background-color: red; flex-grow:0">2<br>flex-grow:0</div>
+		<div class="item" style="background-color: yellow; flex-grow:0">3<br>flex-grow:0</div>
+		<div class="item" style="background-color: green; flex-grow:0">4<br>flex-grow:0</div>
+		<div class="item" style="background-color: blue; flex-grow:0">5<br>flex-grow:0</div>
+	</div>
+	<div class="con">
+		<div class="item" style="background-color: pink; flex-grow:1">1<br>flex-grow:1</div>
+		<div class="item" style="background-color: red; flex-grow:1">2<br>flex-grow:1</div>
+		<div class="item" style="background-color: yellow; flex-grow:3">3<br>flex-grow:3</div>
+		<div class="item" style="background-color: green; flex-grow:1">4<br>flex-grow:1</div>
+		<div class="item" style="background-color: blue; flex-grow:1">5<br>flex-grow:1</div>
+	</div>
+	
+	<h1>3. item >>> flex-shrink</h1>
+	<pre>
+		flex-shrink: Container의 크기가 감소함에 따라 item의 크기가 감소할 때 감소하는 비율을 지정하는 속성
+		* flex-shrink:0 -> Container의 크기가 감소해도 item의 크기가 감소하지 않는다.
+		* flex-shrink:1이상 -> Container의 크기가 item의 크기보다 작아질 때 item의 크기가 Container에 맞춰 함께 감소 
+	</pre>
+	<div class="con">
+		<div class="item" style="background-color: pink; flex-shrink:0">1<br>flex-shrink:0</div>
+		<div class="item" style="background-color: red; flex-shrink:0">2<br>flex-shrink:0</div>
+		<div class="item" style="background-color: yellow; flex-shrink:0">3<br>flex-shrink:0</div>
+		<div class="item" style="background-color: green; flex-shrink:0">4<br>flex-shrink:0</div>
+		<div class="item" style="background-color: blue; flex-shrink:0">5<br>flex-shrink:0</div>
+	</div>
+	<div class="con">
+		<div class="item" style="background-color: pink; flex-shrink:1">1<br>flex-shrink:1</div>
+		<div class="item" style="background-color: red; flex-shrink:1">2<br>flex-shrink:1</div>
+		<div class="item" style="background-color: yellow; flex-shrink:3;">3<br>flex-shrink:3</div>
+		<div class="item" style="background-color: green; flex-shrink:1">4<br>flex-shrink:1</div>
+		<div class="item" style="background-color: blue; flex-shrink:1">5<br>flex-shrink:1</div>
+	</div>
+
+
+	<h1>4. item >>> flex-basis</h1>
+	<pre>
+		* flex-basis : item의 기본 크기를 결정하는 속성. default : auto
+		* flex-basis를 사용해 item의 크기를 지정할 때는 모든 단위(px,%,em,vw,vh,vmin,vmax...)를 사용가능
+		* flex-basis의 속성값을 0으로 지정하면 해당 item은 절대적 item(absolute flex item)이 되어
+		 Container의 크기를 기준으로 item의 크기를 결정한다. -> 현재는 해당 요소의 최소너비를 지정
+		* flex-basis를 auto로 지정하면 item은 상대적 item(relative flex item)이 되어 컨텐츠의 크기를 기준으로 크기가 결정
+	</pre>
+	<div class="con" >
+		<div class="item" style="background-color: pink; flex-basis:0%">1<br>flex-basis:0</div>
+		<div class="item" style="background-color: red; flex-basis:auto">2<br>flex-basis:auto</div>
+		<div class="item" style="background-color: yellow; flex-basis:400px">3<br>flex-basis:400px</div>
+	</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

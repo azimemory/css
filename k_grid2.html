@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style>
+		div{
+			font-size:1.1vw;
+			background-color: rgba(255,255,0,0.3);
+		}
+		
+		/* 해당 요소의 마지막 자식요소 뒤에 가상 요소를 추가한다. */
+		.wrap_float-clear:after{
+			content: "";
+			display: block;
+			clear:both;
+		}
+	</style>
+
+</head>
+<body>
+	<h1>float 속성을 활용해 block요소를 한 줄에 여러개 배치하기</h1>
+	<pre>
+		float:left, float:right >> 원하는 요소를 좌측 정렬하거나 우측 정렬할 수 있다.
+		float 속성을 사용한 요소는 보통흐름(normal flow)에서 제외 된다.
+		normal-flow: 브라우저가 html 요소를 배치하는 흐름.
+	</pre>
+	
+	<!-- 
+		float:left가 설정되어있기 때문에 normal flow에서 제외되어 있다
+		브라우저가 html 요소들을 배치할 때 float속성이 적용된 요소들은 고려하지 않고 배치한다.
+	 -->
+	
+	<!-- float을 clear해준다. overflow:hidden 
+	     float의 다음 요소가 float요소 아래에 배치되기 위해서는 float요소의 높이만큼을 
+	     차지하는 요소가 필요하다. (height 속성으로 높이를 잡아줘도 정상적으로 배치가 된다.)
+	     overflow:hidden은 부모요소의 높이에 자식 float요소의 높이를 잡아준다. 
+	-->
+	<h2>1. overflow:hidden활용하기</h2>
+	<div class="wrap_float" style="overflow: hidden">
+		<div style="height:100px; width:30%; float:left;">
+			block요소를 한 줄에 여러개 배치하고 싶다면 어떻게 해야 할까?
+		</div>
+		<div style="height:100px; width:30%; background-color:skyblue; float:left;">
+			block요소를 한 줄에 여러개 배치하고 싶다면 어떻게 해야 할까?
+		</div>
+	 </div>
+	
+	<div style="height:100px; width:50%; background-color:red; color:white">
+		이 div는 어디에 배치되게 될까?
+	</div>
+	
+	<h2>2. 가상요소를 활용해 float clear 해주기</h2>
+	<div class="wrap_float-clear">
+		<div style="height:100px; width:30%; float:left;">
+			block요소를 한 줄에 여러개 배치하고 싶다면 어떻게 해야 할까?
+		</div>
+		<div style="height:100px; width:30%; background-color:skyblue; float:left;">
+			block요소를 한 줄에 여러개 배치하고 싶다면 어떻게 해야 할까?
+		</div>
+	</div>
+	
+	<div style="height:100px; width:50%; background-color:red; color:white">
+		이 div는 어디에 배치되게 될까?
+	</div>
+	
+	<h2>3. dislplay:inline-block</h2>
+	<pre>
+		display의 속성값으로 inline-block을 지정하면
+		해당 element를 마치 inline요소 인 것 처럼, 한 줄에 요소를 배치할 수 있으면서
+		동시에 마치 block 요소인 것처럼 width, height 값을 지정할 수 있다. 
+	</pre>
+	<div style="height:100px; width:30%; display: inline-block;">
+			block요소를 한 줄에 여러개 배치하고 싶다면 어떻게 해야 할까?
+	</div>
+	<div style="height:100px; width:30%; background-color:skyblue; display: inline-block;">
+			block요소를 한 줄에 여러개 배치하고 싶다면 어떻게 해야 할까?
+	</div>	
+	<div style="height:100px; width:50%; background-color:red; color:white">
+		이 div는 어디에 배치되게 될까?
+	</div>
+	
+	
+	
+	
+	
+	
+	
+
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	.item{
+		width:50%;
+		height:50px;
+	}
+	
+	.con_nowrap{
+		display: flex;
+	}
+	
+	.con_wrap{
+		display:flex;
+		flex-wrap:wrap;
+	}
+	
+	.con_wrap-reverse{
+		display: flex;
+		flex-wrap:wrap-reverse;
+	}
+
+</style>
+</head>
+<body>
+	<h1>Container >> flex-wrap 속성</h1>
+	<pre>
+		flex-wrap 속성을 사용해 줄바꿈 설정을 할 수 있다.
+		flex-wrap:nowrap         줄바꿈하지 않음(defautl)
+		flex-wrap:wrap			 줄바꿈 사용
+		flex-wrap:wrap-reverse	 역 방향으로 줄바꿈
+	</pre>
+	<h2>width:50%</h2>
+	<div>
+		<div class="item" style="background-color: pink"></div>
+		<div class="item" style="background-color: red"></div>
+		<div class="item" style="background-color: yellow"></div>
+		<div class="item" style="background-color: green"></div>
+		<div class="item" style="background-color: blue"></div>
+	</div>
+	
+	<h2>2. flex-wrap:nowrap(default)</h2>
+	<div class="con_nowrap">
+		<div class="item" style="background-color: pink"></div>
+		<div class="item" style="background-color: red"></div>
+		<div class="item" style="background-color: yellow"></div>
+		<div class="item" style="background-color: green"></div>
+		<div class="item" style="background-color: blue"></div>
+	</div>
+	
+	<h2>3. flex-wrap:wrap</h2>
+	<div class="con_wrap">
+		<div class="item" style="background-color: pink"></div>
+		<div class="item" style="background-color: red"></div>
+		<div class="item" style="background-color: yellow"></div>
+		<div class="item" style="background-color: green"></div>
+		<div class="item" style="background-color: blue"></div>
+	</div>
+	
+	<h2>4. flex-wrap:wrap-reverse</h2>
+	<div class="con_wrap-reverse">
+		<div class="item" style="background-color: pink"></div>
+		<div class="item" style="background-color: red"></div>
+		<div class="item" style="background-color: yellow"></div>
+		<div class="item" style="background-color: green"></div>
+		<div class="item" style="background-color: blue"></div>
+	</div>
+	
+	
+
+</body>
+</html>

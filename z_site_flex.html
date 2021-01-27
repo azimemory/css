@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	body{
+		margin:0;
+		padding:0;
+	}
+	
+	h1{
+		text-align: center;
+	}
+	
+	ul{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	p{
+		margin: 0;
+		padding: 0;
+	}
+	
+	.header-section{
+		display:flex;
+		justify-content:space-around;
+		height:10vh;
+	}
+	
+	.header-section>div{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width:30%;
+		margin:0 1.5% 0 1.5%
+	}
+	
+	#logo{
+		width:4vw;
+		height:4vw;
+	}
+	
+	.login{
+		display:block !important;
+		font-size: 1vw;
+	}
+	
+	.login>*{
+		display: inline-block;
+	}
+	
+	.login>label{
+		width:70%;		
+	}
+	
+	.login input{
+		width:60%;
+	}
+	
+	.login span{
+		display:inline-block;
+		width:30%;
+	}
+	
+	.login>button{
+		
+		width:20%;		
+	}
+	
+	.gnb{
+		height:5vh;
+	}
+	
+	.gnb_menu{
+		display: flex;
+		justify-content: space-around;
+		align-items:center;
+		height:100%;
+		background-color: black;
+		color: white;
+	}
+	
+	.gnb_menu>*{
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		height:100%;
+		width:16.6%;
+	}
+	
+	.gnb_menu>*:hover{
+		background-color: red;
+	}
+	
+	#gal{
+		width:100%;
+		position:absolute;
+		top:5vh;
+	}
+	
+	.snb_gal{
+		text-align:center;
+		line-height: 0;
+		opacity: 0;
+	}
+	
+	.wrap_gal{
+		position: relative;
+		height:100%;
+	}
+	
+	.wrap_gal:hover .snb_gal{
+		background-color:blue;
+		transition-duration:0.5s;
+		line-height: 2;
+		opacity: 1;
+	}
+	
+	.contents{
+		min-height:70vh;
+		background-color: gray;	
+	}
+
+	.footer{
+		height:15vh;
+		background-color: skyblue;
+	}
+
+</style>
+</head>
+<body>
+	<div class="header-section">
+		<div><img id="logo"></div>
+		<div><h1>MyMain</h1></div>
+		<div class="login">
+			<label><span>아이디:</span><input type="text" id="id"></label>
+			<label><span>password:</span><input type="password" id="password"></label>
+			<button>로그인</button>
+		</div>
+	</div>
+	<div class="gnb">
+		<ul class="gnb_menu">
+			<li>메인</li>
+			<li>공지사항</li>
+			<li>자유게시판</li>
+			<li class="wrap_gal">
+				갤러리
+				<ul id="gal">
+					<li class="snb_gal">회원사진</li>
+					<li class="snb_gal">동물사진</li>
+				</ul>
+			</li>
+			<li>회원관리</li>
+			<li>채팅하기</li>
+		</ul>
+	
+	</div>
+	<div class="contents">
+		contents
+	</div>
+	<div class="footer">
+		이 문서는 HTML5 기준으로 작성되었습니다<br>
+		Copyright © 1998-2020 KH Information Educational Institute All Right Reserved
+	</div>
+</body>
+</html>

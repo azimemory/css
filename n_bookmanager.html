@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="resources/css/all.css" rel="stylesheet">
+<link href="resources/css/reset.css" rel="stylesheet">
+
+<!-- 
+미디어쿼리 : 단말기의 종류나 화면의 수치에 따라 다른 스타일을 요소에 적용할 수 있겠끔 해주는 구문
+작성법 :
+	@media [not/only][매체유형 and](표현식){css스타일 코드}
+	매체유형 : all, print(프린트기기), screen(웹 또는 모바일), speech(스크린리더)
+	미디어쿼리 속성 : width, height, aspect-ratio(화면비율)
+					  device-width, device-height, device-aspect-ratio
+					ex) width < 600px
+	 표현식 : 표현식의 결과가 true라면 media query 의 style이 적용
+	 		  false라면 media query의 style을 무시
+	 		  
+	 		  미디어쿼리4  이전
+	 		  	min/max 접두어를 사용해 표현식을 작성
+	 		  	ex) min-aspect-ratio:5/4 최소 가로/세로 비율을 5:4로 지정
+					min-width:500px 
+					
+			  미디어쿼리 4 이후
+			  비교연산자 사용 가능
+			  ex) min-width:500px ==> width >= 500px
+	
+	* 미디어쿼리를 작성한 뒤 , 를 통해서 다음 미디어쿼리를 이어서 작성할 수 있다.
+	* not은 미디어쿼리의 결과를 부정할 때 사용
+	* only는 미디어쿼리가 true 일 때 스타일을 적용 -> 구형 브라우저에서 사용할 때 지정
+	
+	
+	link 태그의 media 속성을 사용해서 미디워쿼리 사용하기.
+	link 태그의 media 속성에 미디어쿼리를 작성하고, 
+	해당 미디어쿼리가 참일 때 사용할 css의 경로를 href 속성에 작성				
+
+ -->
+<!-- 
+	<link media="screen and (min-aspect-ratio:5/4)" href="resources/css/lec_web.css" rel="stylesheet">
+	<link media="screen and (max-aspect-ratio:5/4)" href="resources/css/lec_mob.css" rel="stylesheet"> 
+-->
+
+<link href="resources/css/lec_web.css" rel="stylesheet">
+
+</head>
+<body>
+	<header class="header-section">
+		<div class="wrap_top-logo">
+			<a class="top-logo-text">PCLASS</a>
+		</div>
+		
+		<form class="frm_top-search">
+			<input type="search" class="input_top-search" placeholder="검색어를 입력하세요.">
+			<button><i class="fas fa-search"></i></button>
+		</form>
+		
+		<div class="wrap_user">
+			<a class="top_user top_join">회원가입</a>
+			<a class="top_user">Login</a>
+		</div>
+	</header>
+	<aside class="wrap_snb">
+		<p>Menu</p>
+		<ul class="snb_menu">
+			<li>
+				<i class="fas fa-search"></i>
+				<span>도서검색</span>
+			</li>
+			<li>
+				<i class="fas fa-cart-plus"></i>
+				<span>장바구니</span>
+			</li>
+			<li>
+				<i class="far fa-clipboard"></i>
+				<span>공지사항</span>
+			</li>
+			<li>
+				<i class="fas fa-user-friends"></i>
+				<span>about us</span>
+			</li>
+		</ul>
+	</aside>
+	<section class="contents">
+		<article class="middle">
+			<div class="site-main">
+				<p class="tit_site">P Class 도서관</p>
+				<form class="frm_main-search">
+					<span>검색</span>
+					<input type="search" class="input_search" placeholder="검색어를 입력하세요">
+					<button class="btn_search"><i class="fas fa-search"></i></button>
+				</form>
+			</div>
+			<ul class="gnb_menu">
+				<li>
+					<i class="fas fa-search"></i>
+					<span>도서검색</span>
+				</li>
+				<li>
+					<i class="fas fa-cart-plus"></i>
+					<span>장바구니</span>
+				</li>
+				<li>
+					<i class="far fa-clipboard"></i>
+					<span>공지사항</span>
+				</li>
+				<li>
+					<i class="fas fa-user-friends"></i>
+					<span>about us</span>
+				</li>
+			</ul>
+		</article>
+		<article class="wrap_book">
+			<div class='wrap_book-line'>
+				<p class='cate-book'>최근 인기 도서</p>
+				<div class='book-line'>
+					<div>
+						<img src="resources/image/Nudge.jpg">
+						<p class="tit_book">Nudge</p>
+					</div>
+					<div>
+						<img src="resources/image/Nudge.jpg">
+						<p class="tit_book">Nudge</p>
+					</div>
+					<div>
+						<img src="resources/image/Nudge.jpg">
+						<p class="tit_book">Nudge</p>
+					</div>
+					<div>
+						<img src="resources/image/Nudge.jpg">
+						<p class="tit_book">Nudge</p>
+					</div>
+				</div>
+			</div>
+			<div class='wrap_book-line'>
+				<p class='cate-book'>스테디셀러</p>
+				<div class='book-line'>
+					<div>
+						<img src="resources/image/Nudge.jpg">
+						<p class="tit_book">Nudge</p>
+					</div>
+					<div>
+						<img src="resources/image/Nudge.jpg">
+						<p class="tit_book">Nudge</p>
+					</div>
+					<div>
+						<img src="resources/image/Nudge.jpg">
+						<p class="tit_book">Nudge</p>
+					</div>
+					<div>
+						<img src="resources/image/Nudge.jpg">
+						<p class="tit_book">Nudge</p>
+					</div>
+				</div>
+			</div>
+			<div class='wrap_book-line'>
+				<p class='cate-book'>새로 들어온 책</p>
+				<div class='book-line'>
+					<div>
+						<img src="resources/image/Nudge.jpg">
+						<p class="tit_book">Nudge</p>
+					</div>
+					<div>
+						<img src="resources/image/Nudge.jpg">
+						<p class="tit_book">Nudge</p>
+					</div>
+					<div>
+						<img src="resources/image/Nudge.jpg">
+						<p class="tit_book">Nudge</p>
+					</div>
+					<div>
+						<img src="resources/image/Nudge.jpg">
+						<p class="tit_book">Nudge</p>
+					</div>
+				</div>
+			</div>
+			<div class='wrap_book-line'>
+				<p class='cate-book'>최근 대출 도서</p>
+				<div class='book-line'>
+					<div>
+						<img src="resources/image/Nudge.jpg">
+						<p class="tit_book">Nudge</p>
+					</div>
+					<div>
+						<img src="resources/image/Nudge.jpg">
+						<p class="tit_book">Nudge</p>
+					</div>
+					<div>
+						<img src="resources/image/Nudge.jpg">
+						<p class="tit_book">Nudge</p>
+					</div>
+					<div>
+						<img src="resources/image/Nudge.jpg">
+						<p class="tit_book">Nudge</p>
+					</div>
+				</div>
+			</div>
+		</article>
+	</section>
+	<footer class="bottom">
+		bottom
+	</footer>
+</body>
+</html>

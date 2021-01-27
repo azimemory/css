@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style>
+		div{
+			background-color: yellow;
+		}
+		
+		span{
+			background-color: skyblue;	
+		}
+		
+		.div_margin{
+			margin-top: 3%;
+			margin-bottom:3%;
+			margin-left:3%;
+			margin-right:3%;
+		}
+		
+		.span_margin{
+			margin-top: 3%;
+			margin-bottom:3%;
+			margin-left:3%;
+			margin-right:3%;
+		}
+		
+		.div_padding:hover{
+			padding-top: 3%;
+			padding-bottom:3%;
+			padding-left:3%;
+			padding-right:3%;
+		}
+		
+		.span_padding:active{
+			padding-top: 3%;
+			padding-bottom:3%;
+			padding-left:3%;
+			padding-right:3%;
+		}
+	
+	</style>
+
+</head>
+<body>
+	<!-- 
+		HTML Elements의 화면상의 분류
+			1. 화면에 표시가 되지 않는 Element(head,body,meta,title,style....)
+			2. 화면에 표시가 되는 element
+				2-1:block level element (display 속성의 기본값이 block인 요소)
+					한 줄에 한 요소만 위치할 수 있는 element
+					width, height 속성 사용 가능 -> 요소의 크기를 조절할 수 있다.
+					margin 영역을 지정할 때 모든 방향(상하좌우)의 margin을 지정할 수 있다.
+					
+				2-2:inline level element (display 속성의 기본값이 inline 인 요소)
+					한 줄에 여러 요소가 위치할 수 있는 element
+					width, height 속성 사용 불가 -> 요소의 크기를 조절할 수 없다.
+					margin 영역을 지정할 때 좌,우 방향만 margin을 지정할 수 있다.
+				
+				block 요소를 inline 요소 처럼 사용하고 싶다면
+				또는 inline 요소를 block요소 처럼 사용하고 싶다면
+				display 속성에 속성값을 지정해 block요소를 inline요소로 활용하거나
+				inline 요소를 block 요소로 활용할 수도 있다.
+	
+	 -->
+	 
+	 <h1>block-level / inline-level  elements의 영역과 크기</h1>
+	 
+	 <h2>1. block/inline element의 영역</h2>
+	
+	 <div>
+	 	block level element : block요소는 너비가 부모 elements의 너비와 동일하고<br>
+	 						높이는 컨텐츠의 높이와 동일하다.
+	 </div>
+	 <div>
+	 	block level element : block요소는 너비가 부모 elements의 너비와 동일하고<br>
+	 						높이는 컨텐츠의 높이와 동일하다.
+	 </div>
+	 <span>
+	 	inline level element : inline요소는 너비가 컨텐츠의 너비와 동일하고
+	 						 높이도 컨텐츠의 높이와 동일하다.
+	 </span>
+	  <span style="background-color: red; color:white">
+	 	***추가 elements***
+	 </span>
+	 
+	 <h2>2. block 요소와 inline 요소의 hight, width</h2>
+	 <div style="width:30%; height:200px">
+	 	block요소는 width속성과 height 속성을 사용할 수 있다.<br>
+	 	width:30% / height:200px
+	 </div>
+	 <span style="width:300000%; height:200000px">
+	 	inline요소는 width 속성과 height 속성을 사용할 수 없다. width:300000%/height:200000px
+	 </span>
+	 
+	 <h2>3. block요소와 inline요소의 margin, padding</h2>
+	 <pre>
+	 	margin: 테두리(border)를 기준으로 다른 요소와의 거리
+	 			
+	 			**마진상쇄: 요소간 margin-top과 margin-bottom 영역이 겹칠 경우 두 요소 중 margin값이 큰 요소의 
+	 			margin만 적용  
+	 			
+	 			
+	 	padding: 테두리(border)를 기준으로 컨텐츠와의 거리
+	 </pre>
+	 <div class="div_margin">
+	 	block요소의 margin은 상하좌우 모두 적용 된다. <br>
+	 	margin-top:3%;<br>
+	 	margin-bottom:3%;<br>
+	 	margin-left:3%;<br>
+	 	margin-right:3%;<br>
+	 </div>
+	 <div class="div_margin">
+	 	block요소의 margin은 상하좌우 모두 적용 된다. <br>
+	 	margin-top:3%;<br>
+	 	margin-bottom:3%;<br>
+	 	margin-left:3%;<br>
+	 	margin-right:3%;<br>
+	 </div>
+	 
+	 <div>
+	 	span의 margin-top을 확인하기 위한 div 요소
+	 </div>
+	 
+	 <span class="span_margin">
+	 	inline 요소의 margin은 좌우에만 적용이 된다.
+	 </span>
+	 <span class="span_margin">
+	 	inline 요소의 margin은 좌우에만 적용이 된다.
+	 </span>
+	 
+	  <div>
+	 	span의 margin-top을 확인하기 위한 div 요소
+	 </div>
+	 
+	 <div class="div_padding" style="margin-top:10px; margin-bottom:10px; width:30%; height:100px">
+	 	block요소의 padding 상하좌우 모두 잘 적용이 된다.
+	 </div>
+	 <span class="span_padding">
+	 	inline요소의 padding 상하좌우 모두 잘 적용이 된다.
+	 </span>
+	 
+	 
+	 
+	 
+	 
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style type="text/css">
+		div{
+			background-color: yellow;
+		}
+		
+		.wrap{
+			width:60%;
+			height:500px;
+			background-color: skyblue;
+		}
+	
+		.wrap div{
+			width:33%;
+			height:160px;
+			border: thin solid;
+		}
+	
+		.translate:hover{
+			transform:translate(200%,30%);
+		}
+		
+		.translateX:hover{
+			transform:translateX(100%);
+		}
+	
+		.translateY:hover{
+			transform:translateY(30%);
+		}
+		
+		.box_child{
+			position: relative;
+			left:50%;
+			top:50%;
+			transform:translate(-50%,-50%);
+		}
+	</style>
+</head>
+<body>
+	<h2>transform:translate 활용하기</h2>
+	<pre>
+		transform:translateX(x) : 요소의 x축으로 지정한 거리만큼 이동
+		transform:translateY(y) : 요소의 y축으로 지정한 거리만큼 이동
+		transform:translate(x,y) : 요소의 xy축으로 지정한 거리만큼 이동
+		
+		* 거리를 지정할 때 %단위를 사용하면 element의 width, height 를 기준으로
+		거리를 이동시킨다. 
+			ex) transform:translateX(100%) --> 해당 element의 width값이 10px 이라면 10px만큼 이동한다.
+	</pre>
+	
+	<div class="wrap">
+		<div class="translate">
+			transform:translate(200%,30%);
+		</div>
+		<div class="translateX">
+			transform:translateX(100%);
+		</div>
+		<div class="translateY">
+			transform:translateY(30%);
+		</div>
+	</div>
+	
+	<h2>부모요소의 정 가운데 자식요소 배치하기</h2>
+	<div class="wrap">
+		<div class="box_child">
+		
+		</div>
+	</div>
+	
+	
+	
+	
+	
+
+
+</body>
+</html>

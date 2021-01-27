@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	.con{
+		display: flex;
+		height:200px;
+		border: dotted;
+	}
+	
+	.item{
+		width: 200px;
+		height:50px;
+	}
+
+</style>
+
+</head>
+<body>
+
+	<h1>align-self : 개별 item을 교차축 기준으로 정렬하기 위한 속성</h1>
+	<pre>
+		* align-items 속성에 우선한다.
+		align-self:auto  >>  align-item의 속성값을 그대로 사용. default
+		align-self:flex-start		item을 시작점부터 정렬
+		align-self:flex-end			item을 끝점부터 정렬
+		align-self:center			item을 가운데 정렬
+		align-self:baseline			item을 문자 기준선으로 정렬
+		align-self:stretch			교차축을 채우기 위해 item의 크기를 늘림
+	</pre>
+	
+	<h2>align-self 속성 사용하기</h2>
+	<div class="con">
+		<div class="item" style="background-color: pink; align-self: flex-start;">align-self: flex-start;</div>
+		<div class="item" style="background-color: red; align-self: flex-end;">align-self: flex-end;</div>
+		<div class="item" style="background-color: yellow; align-self: center;">align-self: center;</div>
+		<div class="item" style="background-color: green; align-self: baseline;">align-self: baseline;</div>
+		<div style="background-color: blue; align-self: stretch;">align-self: stretch;</div>
+		
+		<div class="con" style="flex-direction: column; width:500px">
+			<div class="item" style="background-color: pink; align-self: flex-start;">align-self: flex-start;</div>
+			<div class="item" style="background-color: red; align-self: flex-end;">align-self: flex-end;</div>
+			<div class="item" style="background-color: yellow; align-self: center;">align-self: center;</div>
+			<div class="item" style="background-color: green; align-self: baseline;">align-self: baseline;</div>
+			<div style="background-color: blue; align-self: stretch;">align-self: stretch;</div>
+		</div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+</body>
+</html>

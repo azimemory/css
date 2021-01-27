@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	.item{
+		width:150px;
+	}
+	
+	.con{
+		display: flex;
+	}
+
+</style>
+</head>
+<body>
+	<h1>Container >>> align-items</h1>
+	<pre>
+		align-items:교차축의 정렬 방식을 설정
+		align-items:flex-start		items를 시작점 부터 정렬 default
+		align-items:flex-end		items를 끝점 부터 정렬
+		align-items:center		    items를 가운데 정렬
+		align-items:baseline		items를 문자 기준선에 정렬
+		align-items:stretch			Container의 교차축을 채우기 위해 items의 크기를 늘림
+	</pre>
+
+	<h2>1. align-items:flex-start</h2>
+	<div class="con">
+		<div class="item" style="background-color: pink; height:50px">1</div>
+		<div class="item" style="background-color: red; height:100px">2</div>
+		<div class="item" style="background-color: yellow; height:150px">3</div>
+		<div class="item" style="background-color: green; height:200px">4</div>
+		<div class="item" style="background-color: blue; height:250px">5</div>
+	</div>
+	
+	<h2>2. align-items:flex-end</h2>
+	<div class="con" style="align-items: flex-end">
+		<div class="item" style="background-color: pink; height:50px">1</div>
+		<div class="item" style="background-color: red; height:100px">2</div>
+		<div class="item" style="background-color: yellow; height:150px">3</div>
+		<div class="item" style="background-color: green; height:200px">4</div>
+		<div class="item" style="background-color: blue; height:250px">5</div>
+	</div>
+	
+	<h2>3. align-items:center</h2>
+	<div class="con" style="align-items: center">
+		<div class="item" style="background-color: pink; height:50px">1</div>
+		<div class="item" style="background-color: red; height:100px">2</div>
+		<div class="item" style="background-color: yellow; height:150px">3</div>
+		<div class="item" style="background-color: green; height:200px">4</div>
+		<div class="item" style="background-color: blue; height:250px">5</div>
+	</div>
+	
+	<h2>4. align-items:baseline</h2>
+	<div class="con" style="align-items: baseline">
+		<div class="item" style="background-color: pink; height:50px; line-height:200px">1</div>
+		<div class="item" style="background-color: red; height:100px; line-height:100px">2</div>
+		<div class="item" style="background-color: yellow; height:150px; line-height:150px">3</div>
+		<div class="item" style="background-color: green; height:200px; line-height:50px">4</div>
+		<div class="item" style="background-color: blue; height:250px; line-height:250px">5</div>
+	</div>
+	
+	<!-- stretch : 만약 item의 height값이 고정되어 있다면 작동 X -->
+	<h2>5. align-items:stretch</h2>
+	<div class="con" style="align-items: stretch;">
+		<div class="item" style="background-color: pink; line-height:200px">1</div>
+		<div class="item" style="background-color: red;  line-height:100px">2</div>
+		<div class="item" style="background-color: yellow;  line-height:150px">3</div>
+		<div class="item" style="background-color: green;  line-height:50px">4</div>
+		<div class="item" style="background-color: blue;  line-height:250px">5</div>
+	</div>
+	
+	
+
+
+</body>
+</html>
